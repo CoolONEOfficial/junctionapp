@@ -6,13 +6,14 @@
 //
 
 import SwiftUI
+import UserNotifications
 
 struct ContentView: View {
     @StateObject var notifications = Notifications.shared
 
     @ViewBuilder
     var content: some View {
-        MainView(viewModel: .init())
+        CityView(viewModel: .init())
     }
 
     var body: some View {
@@ -24,6 +25,13 @@ struct ContentView: View {
             notifications.alert ?? .init(title: Text(""), message: nil, dismissButton: nil)
         }.overlay {
             ActivityIndicator(isLoading: notifications.isLoading)
+        }
+        .task {
+            do {
+                try await UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound])
+            } catch {
+                debugPrint(error)
+            }
         }
     }
 }

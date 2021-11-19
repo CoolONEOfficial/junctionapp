@@ -36,12 +36,23 @@
 		8551FF592747CB820053649E /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8551FF582747CB820053649E /* Theme.swift */; };
 		8551FF5C2747CE070053649E /* NetworkService+main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8551FF5B2747CE070053649E /* NetworkService+main.swift */; };
 		8551FF5E2747CEFE0053649E /* Encodable+dict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8551FF5D2747CEFE0053649E /* Encodable+dict.swift */; };
-		8551FF612747CF310053649E /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 8551FF602747CF310053649E /* SwiftyJSON */; };
 		8551FF632747D1230053649E /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8551FF622747D1230053649E /* ViewModel.swift */; };
 		8551FF652747D1E10053649E /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8551FF642747D1E10053649E /* Notifications.swift */; };
 		8551FF672747D22F0053649E /* Alert+stringExpr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8551FF662747D22F0053649E /* Alert+stringExpr.swift */; };
 		8551FF692747D2EA0053649E /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8551FF682747D2EA0053649E /* ActivityIndicator.swift */; };
-		8551FF6C2747FB430053649E /* SwiftUIPullToRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 8551FF6B2747FB430053649E /* SwiftUIPullToRefresh */; };
+		855DAB062748353000BE2AAB /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855DAB052748353000BE2AAB /* MapView.swift */; };
+		855DAB09274837E600BE2AAB /* CityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855DAB08274837E600BE2AAB /* CityView.swift */; };
+		855DAB0B27483B3D00BE2AAB /* CityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855DAB0A27483B3D00BE2AAB /* CityViewModel.swift */; };
+		855DAB0D2748459100BE2AAB /* HouseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855DAB0C2748459100BE2AAB /* HouseModel.swift */; };
+		855DAB10274846AF00BE2AAB /* BottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 855DAB0F274846AF00BE2AAB /* BottomSheet */; };
+		855DAB122748531900BE2AAB /* NetworkService+notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855DAB112748531900BE2AAB /* NetworkService+notification.swift */; };
+		855DAB142748533C00BE2AAB /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855DAB132748533C00BE2AAB /* NotificationModel.swift */; };
+		855DAB162748541C00BE2AAB /* NotificationsViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855DAB152748541C00BE2AAB /* NotificationsViewModifier.swift */; };
+		855DAB192748542D00BE2AAB /* NotificationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855DAB182748542D00BE2AAB /* NotificationsViewModel.swift */; };
+		855DAB1B274855D700BE2AAB /* CoordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855DAB1A274855D700BE2AAB /* CoordModel.swift */; };
+		855DAB1D2748571E00BE2AAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855DAB1C2748571E00BE2AAB /* AppDelegate.swift */; };
+		855DAB202748613D00BE2AAB /* SwiftLocation in Frameworks */ = {isa = PBXBuildFile; productRef = 855DAB1F2748613D00BE2AAB /* SwiftLocation */; };
+		855DAB222748657100BE2AAB /* NetworkService+visit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855DAB212748657100BE2AAB /* NetworkService+visit.swift */; };
 		85BA7ED62748129500DF4F43 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85BA7ED52748129500DF4F43 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +81,17 @@
 		8551FF642747D1E10053649E /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		8551FF662747D22F0053649E /* Alert+stringExpr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+stringExpr.swift"; sourceTree = "<group>"; };
 		8551FF682747D2EA0053649E /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		855DAB052748353000BE2AAB /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		855DAB08274837E600BE2AAB /* CityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityView.swift; sourceTree = "<group>"; };
+		855DAB0A27483B3D00BE2AAB /* CityViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityViewModel.swift; sourceTree = "<group>"; };
+		855DAB0C2748459100BE2AAB /* HouseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseModel.swift; sourceTree = "<group>"; };
+		855DAB112748531900BE2AAB /* NetworkService+notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkService+notification.swift"; sourceTree = "<group>"; };
+		855DAB132748533C00BE2AAB /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
+		855DAB152748541C00BE2AAB /* NotificationsViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewModifier.swift; sourceTree = "<group>"; };
+		855DAB182748542D00BE2AAB /* NotificationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewModel.swift; sourceTree = "<group>"; };
+		855DAB1A274855D700BE2AAB /* CoordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordModel.swift; sourceTree = "<group>"; };
+		855DAB1C2748571E00BE2AAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		855DAB212748657100BE2AAB /* NetworkService+visit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkService+visit.swift"; sourceTree = "<group>"; };
 		85BA7ED52748129500DF4F43 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,12 +102,12 @@
 			files = (
 				8551FF2C274710F10053649E /* SDWebImageSwiftUI in Frameworks */,
 				8551FF29274710DF0053649E /* SkeletonUI in Frameworks */,
-				8551FF6C2747FB430053649E /* SwiftUIPullToRefresh in Frameworks */,
 				8551FF26274710C70053649E /* Regex in Frameworks */,
 				8551FF34274711460053649E /* PopupView in Frameworks */,
-				8551FF612747CF310053649E /* SwiftyJSON in Frameworks */,
 				8551FF23274710A90053649E /* Alamofire in Frameworks */,
+				855DAB10274846AF00BE2AAB /* BottomSheet in Frameworks */,
 				8551FF20274710970053649E /* PureSwiftUI in Frameworks */,
+				855DAB202748613D00BE2AAB /* SwiftLocation in Frameworks */,
 				8551FF372747117E0053649E /* DynamicColor in Frameworks */,
 				8551FF1D274710840053649E /* SwiftUIX in Frameworks */,
 				8551FF2F274711270053649E /* MediaCore in Frameworks */,
@@ -120,6 +142,7 @@
 				8551FF392747124A0053649E /* Services */,
 				8551FF38274712410053649E /* Screens */,
 				8551FF0A27470FF20053649E /* junctionappApp.swift */,
+				855DAB1C2748571E00BE2AAB /* AppDelegate.swift */,
 				8551FF0C27470FF20053649E /* ContentView.swift */,
 				8551FF0E27470FF30053649E /* Assets.xcassets */,
 				8551FF1027470FF30053649E /* Preview Content */,
@@ -139,6 +162,7 @@
 		8551FF38274712410053649E /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				855DAB07274837AA00BE2AAB /* City */,
 				8551FF3A274712500053649E /* Main */,
 			);
 			path = Screens;
@@ -156,6 +180,7 @@
 		8551FF3A274712500053649E /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				855DAB172748542100BE2AAB /* Notifications */,
 				8551FF3B2747125B0053649E /* MainView.swift */,
 				8551FF3D274712640053649E /* MainViewModel.swift */,
 			);
@@ -191,6 +216,9 @@
 			isa = PBXGroup;
 			children = (
 				8551FF462747C5FD0053649E /* MainModel.swift */,
+				855DAB0C2748459100BE2AAB /* HouseModel.swift */,
+				855DAB132748533C00BE2AAB /* NotificationModel.swift */,
+				855DAB1A274855D700BE2AAB /* CoordModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -201,6 +229,7 @@
 				8551FF4D2747C9A40053649E /* Text */,
 				8551FF562747CB2C0053649E /* ButtonStyles.swift */,
 				8551FF682747D2EA0053649E /* ActivityIndicator.swift */,
+				855DAB052748353000BE2AAB /* MapView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -219,8 +248,28 @@
 			isa = PBXGroup;
 			children = (
 				8551FF5B2747CE070053649E /* NetworkService+main.swift */,
+				855DAB112748531900BE2AAB /* NetworkService+notification.swift */,
+				855DAB212748657100BE2AAB /* NetworkService+visit.swift */,
 			);
 			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		855DAB07274837AA00BE2AAB /* City */ = {
+			isa = PBXGroup;
+			children = (
+				855DAB0A27483B3D00BE2AAB /* CityViewModel.swift */,
+				855DAB08274837E600BE2AAB /* CityView.swift */,
+			);
+			path = City;
+			sourceTree = "<group>";
+		};
+		855DAB172748542100BE2AAB /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				855DAB152748541C00BE2AAB /* NotificationsViewModifier.swift */,
+				855DAB182748542D00BE2AAB /* NotificationsViewModel.swift */,
+			);
+			path = Notifications;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,8 +299,8 @@
 				8551FF30274711270053649E /* MediaSwiftUI */,
 				8551FF33274711460053649E /* PopupView */,
 				8551FF362747117E0053649E /* DynamicColor */,
-				8551FF602747CF310053649E /* SwiftyJSON */,
-				8551FF6B2747FB430053649E /* SwiftUIPullToRefresh */,
+				855DAB0F274846AF00BE2AAB /* BottomSheet */,
+				855DAB1F2748613D00BE2AAB /* SwiftLocation */,
 			);
 			productName = junctionapp;
 			productReference = 8551FF0727470FF20053649E /* junctionapp.app */;
@@ -291,8 +340,8 @@
 				8551FF2D274711270053649E /* XCRemoteSwiftPackageReference "Media" */,
 				8551FF32274711460053649E /* XCRemoteSwiftPackageReference "PopupView" */,
 				8551FF352747117E0053649E /* XCRemoteSwiftPackageReference "DynamicColor" */,
-				8551FF5F2747CF310053649E /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
-				8551FF6A2747FB430053649E /* XCRemoteSwiftPackageReference "swiftui-pull-to-refresh" */,
+				855DAB0E274846AF00BE2AAB /* XCRemoteSwiftPackageReference "BottomSheet" */,
+				855DAB1E2748613D00BE2AAB /* XCRemoteSwiftPackageReference "SwiftLocation" */,
 			);
 			productRefGroup = 8551FF0827470FF20053649E /* Products */;
 			projectDirPath = "";
@@ -324,23 +373,34 @@
 				8551FF4F2747C9AA0053649E /* Title.swift in Sources */,
 				8551FF652747D1E10053649E /* Notifications.swift in Sources */,
 				8551FF552747C9F40053649E /* Collection+safe.swift in Sources */,
+				855DAB122748531900BE2AAB /* NetworkService+notification.swift in Sources */,
+				855DAB062748353000BE2AAB /* MapView.swift in Sources */,
 				8551FF402747129C0053649E /* NetworkService.swift in Sources */,
 				8551FF692747D2EA0053649E /* ActivityIndicator.swift in Sources */,
+				855DAB0D2748459100BE2AAB /* HouseModel.swift in Sources */,
+				855DAB192748542D00BE2AAB /* NotificationsViewModel.swift in Sources */,
 				8551FF532747C9C70053649E /* Caption.swift in Sources */,
 				8551FF512747C9B20053649E /* Subtitle.swift in Sources */,
 				8551FF5E2747CEFE0053649E /* Encodable+dict.swift in Sources */,
+				855DAB09274837E600BE2AAB /* CityView.swift in Sources */,
 				8551FF492747C91B0053649E /* Colors.swift in Sources */,
 				8551FF442747153B0053649E /* Alamofire+async.swift in Sources */,
 				8551FF0D27470FF20053649E /* ContentView.swift in Sources */,
 				8551FF472747C5FD0053649E /* MainModel.swift in Sources */,
 				8551FF632747D1230053649E /* ViewModel.swift in Sources */,
 				8551FF3C2747125B0053649E /* MainView.swift in Sources */,
+				855DAB142748533C00BE2AAB /* NotificationModel.swift in Sources */,
 				8551FF0B27470FF20053649E /* junctionappApp.swift in Sources */,
 				8551FF572747CB2C0053649E /* ButtonStyles.swift in Sources */,
+				855DAB1D2748571E00BE2AAB /* AppDelegate.swift in Sources */,
 				8551FF592747CB820053649E /* Theme.swift in Sources */,
+				855DAB162748541C00BE2AAB /* NotificationsViewModifier.swift in Sources */,
+				855DAB0B27483B3D00BE2AAB /* CityViewModel.swift in Sources */,
 				8551FF4B2747C95B0053649E /* Fonts.swift in Sources */,
 				8551FF3E274712640053649E /* MainViewModel.swift in Sources */,
+				855DAB1B274855D700BE2AAB /* CoordModel.swift in Sources */,
 				8551FF672747D22F0053649E /* Alert+stringExpr.swift in Sources */,
+				855DAB222748657100BE2AAB /* NetworkService+visit.swift in Sources */,
 				8551FF5C2747CE070053649E /* NetworkService+main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,6 +536,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = junctionapp/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -507,6 +570,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = junctionapp/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -622,20 +688,20 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		8551FF5F2747CF310053649E /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+		855DAB0E274846AF00BE2AAB /* XCRemoteSwiftPackageReference "BottomSheet" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			repositoryURL = "https://github.com/LucasMucGH/BottomSheet";
 			requirement = {
-				branch = master;
+				branch = main;
 				kind = branch;
 			};
 		};
-		8551FF6A2747FB430053649E /* XCRemoteSwiftPackageReference "swiftui-pull-to-refresh" */ = {
+		855DAB1E2748613D00BE2AAB /* XCRemoteSwiftPackageReference "SwiftLocation" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/globulus/swiftui-pull-to-refresh.git";
+			repositoryURL = "https://github.com/malcommac/SwiftLocation";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				minimumVersion = 5.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -691,15 +757,15 @@
 			package = 8551FF352747117E0053649E /* XCRemoteSwiftPackageReference "DynamicColor" */;
 			productName = DynamicColor;
 		};
-		8551FF602747CF310053649E /* SwiftyJSON */ = {
+		855DAB0F274846AF00BE2AAB /* BottomSheet */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8551FF5F2747CF310053649E /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
-			productName = SwiftyJSON;
+			package = 855DAB0E274846AF00BE2AAB /* XCRemoteSwiftPackageReference "BottomSheet" */;
+			productName = BottomSheet;
 		};
-		8551FF6B2747FB430053649E /* SwiftUIPullToRefresh */ = {
+		855DAB1F2748613D00BE2AAB /* SwiftLocation */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8551FF6A2747FB430053649E /* XCRemoteSwiftPackageReference "swiftui-pull-to-refresh" */;
-			productName = SwiftUIPullToRefresh;
+			package = 855DAB1E2748613D00BE2AAB /* XCRemoteSwiftPackageReference "SwiftLocation" */;
+			productName = SwiftLocation;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

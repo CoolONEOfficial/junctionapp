@@ -18,7 +18,7 @@ class MainViewModel: ViewModel {
         defer { notifications.isLoading = false }
 
         do {
-            data = try await nw.fetchData(.init(test: "test"))
+            data = try await nw.fetchData()
         } catch {
             data = nil
         }

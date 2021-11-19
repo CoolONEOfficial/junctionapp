@@ -9,12 +9,7 @@ import Foundation
 import Alamofire
 
 extension NetworkService {
-    struct MainRequest: Encodable {
-        let test: String
-    }
-
-    func fetchData(_ req: MainRequest) async throws -> [MainModel] {
-        try await AF.request(apiBase + "/users"//, method: .post, parameters: req.dict, encoding: JSONEncoding.default
-        ).responseDecodable(of: [MainModel].self)
+    func fetchData() async throws -> [MainModel] {
+        try await AF.request(apiBase + "/users").responseDecodable(of: [MainModel].self)
     }
 }

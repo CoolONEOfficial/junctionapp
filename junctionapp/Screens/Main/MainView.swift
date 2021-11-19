@@ -8,10 +8,20 @@
 import SwiftUI
 import SwiftUIX
 import SwiftUIPullToRefresh
+import MapKit
 
 struct MainView: View {
     @EnvironmentObject var theme: Theme
     @StateObject var viewModel: MainViewModel
+
+    @State var region: MKCoordinateRegion = MKCoordinateRegion(
+        center: .init(latitude: 40.7128, longitude: 74.0060),
+        
+        span: MKCoordinateSpan(
+            latitudeDelta: 10,
+            longitudeDelta: 10
+        )
+    )
 
     var body: some View {
         NavigationView {
@@ -30,12 +40,7 @@ struct MainView: View {
         .task {
             await viewModel.task()
         }
+        .modifier(NotificationsViewModifier(viewModel: .init()))
     }
+        
 }
-
-
-//struct MainView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        MainView()
-//    }
-//}

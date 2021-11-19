@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import UIKit
 
 @main
 struct junctionappApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @StateObject var theme = Theme()
 
     var body: some Scene {
