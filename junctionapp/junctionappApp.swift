@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct junctionappApp: App {
+    @StateObject var theme = Theme()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(theme)
         }
     }
 }

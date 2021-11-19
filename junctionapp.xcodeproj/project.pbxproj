@@ -11,6 +11,38 @@
 		8551FF0D27470FF20053649E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8551FF0C27470FF20053649E /* ContentView.swift */; };
 		8551FF0F27470FF30053649E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8551FF0E27470FF30053649E /* Assets.xcassets */; };
 		8551FF1227470FF30053649E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8551FF1127470FF30053649E /* Preview Assets.xcassets */; };
+		8551FF1D274710840053649E /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 8551FF1C274710840053649E /* SwiftUIX */; };
+		8551FF20274710970053649E /* PureSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8551FF1F274710970053649E /* PureSwiftUI */; };
+		8551FF23274710A90053649E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8551FF22274710A90053649E /* Alamofire */; };
+		8551FF26274710C70053649E /* Regex in Frameworks */ = {isa = PBXBuildFile; productRef = 8551FF25274710C70053649E /* Regex */; };
+		8551FF29274710DF0053649E /* SkeletonUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8551FF28274710DF0053649E /* SkeletonUI */; };
+		8551FF2C274710F10053649E /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8551FF2B274710F10053649E /* SDWebImageSwiftUI */; };
+		8551FF2F274711270053649E /* MediaCore in Frameworks */ = {isa = PBXBuildFile; productRef = 8551FF2E274711270053649E /* MediaCore */; };
+		8551FF31274711270053649E /* MediaSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8551FF30274711270053649E /* MediaSwiftUI */; };
+		8551FF34274711460053649E /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 8551FF33274711460053649E /* PopupView */; };
+		8551FF372747117E0053649E /* DynamicColor in Frameworks */ = {isa = PBXBuildFile; productRef = 8551FF362747117E0053649E /* DynamicColor */; };
+		8551FF3C2747125B0053649E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8551FF3B2747125B0053649E /* MainView.swift */; };
+		8551FF3E274712640053649E /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8551FF3D274712640053649E /* MainViewModel.swift */; };
+		8551FF402747129C0053649E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8551FF3F2747129C0053649E /* NetworkService.swift */; };
+		8551FF442747153B0053649E /* Alamofire+async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8551FF432747153B0053649E /* Alamofire+async.swift */; };
+		8551FF472747C5FD0053649E /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8551FF462747C5FD0053649E /* MainModel.swift */; };
+		8551FF492747C91B0053649E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8551FF482747C91B0053649E /* Colors.swift */; };
+		8551FF4B2747C95B0053649E /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8551FF4A2747C95B0053649E /* Fonts.swift */; };
+		8551FF4F2747C9AA0053649E /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8551FF4E2747C9AA0053649E /* Title.swift */; };
+		8551FF512747C9B20053649E /* Subtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8551FF502747C9B20053649E /* Subtitle.swift */; };
+		8551FF532747C9C70053649E /* Caption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8551FF522747C9C70053649E /* Caption.swift */; };
+		8551FF552747C9F40053649E /* Collection+safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8551FF542747C9F40053649E /* Collection+safe.swift */; };
+		8551FF572747CB2C0053649E /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8551FF562747CB2C0053649E /* ButtonStyles.swift */; };
+		8551FF592747CB820053649E /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8551FF582747CB820053649E /* Theme.swift */; };
+		8551FF5C2747CE070053649E /* NetworkService+main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8551FF5B2747CE070053649E /* NetworkService+main.swift */; };
+		8551FF5E2747CEFE0053649E /* Encodable+dict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8551FF5D2747CEFE0053649E /* Encodable+dict.swift */; };
+		8551FF612747CF310053649E /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 8551FF602747CF310053649E /* SwiftyJSON */; };
+		8551FF632747D1230053649E /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8551FF622747D1230053649E /* ViewModel.swift */; };
+		8551FF652747D1E10053649E /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8551FF642747D1E10053649E /* Notifications.swift */; };
+		8551FF672747D22F0053649E /* Alert+stringExpr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8551FF662747D22F0053649E /* Alert+stringExpr.swift */; };
+		8551FF692747D2EA0053649E /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8551FF682747D2EA0053649E /* ActivityIndicator.swift */; };
+		8551FF6C2747FB430053649E /* SwiftUIPullToRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 8551FF6B2747FB430053649E /* SwiftUIPullToRefresh */; };
+		85BA7ED62748129500DF4F43 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85BA7ED52748129500DF4F43 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +51,26 @@
 		8551FF0C27470FF20053649E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8551FF0E27470FF30053649E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8551FF1127470FF30053649E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8551FF3B2747125B0053649E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		8551FF3D274712640053649E /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		8551FF3F2747129C0053649E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		8551FF432747153B0053649E /* Alamofire+async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+async.swift"; sourceTree = "<group>"; };
+		8551FF462747C5FD0053649E /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
+		8551FF482747C91B0053649E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		8551FF4A2747C95B0053649E /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		8551FF4E2747C9AA0053649E /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
+		8551FF502747C9B20053649E /* Subtitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subtitle.swift; sourceTree = "<group>"; };
+		8551FF522747C9C70053649E /* Caption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caption.swift; sourceTree = "<group>"; };
+		8551FF542747C9F40053649E /* Collection+safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+safe.swift"; sourceTree = "<group>"; };
+		8551FF562747CB2C0053649E /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
+		8551FF582747CB820053649E /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		8551FF5B2747CE070053649E /* NetworkService+main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkService+main.swift"; sourceTree = "<group>"; };
+		8551FF5D2747CEFE0053649E /* Encodable+dict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+dict.swift"; sourceTree = "<group>"; };
+		8551FF622747D1230053649E /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		8551FF642747D1E10053649E /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		8551FF662747D22F0053649E /* Alert+stringExpr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+stringExpr.swift"; sourceTree = "<group>"; };
+		8551FF682747D2EA0053649E /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		85BA7ED52748129500DF4F43 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +78,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8551FF2C274710F10053649E /* SDWebImageSwiftUI in Frameworks */,
+				8551FF29274710DF0053649E /* SkeletonUI in Frameworks */,
+				8551FF6C2747FB430053649E /* SwiftUIPullToRefresh in Frameworks */,
+				8551FF26274710C70053649E /* Regex in Frameworks */,
+				8551FF34274711460053649E /* PopupView in Frameworks */,
+				8551FF612747CF310053649E /* SwiftyJSON in Frameworks */,
+				8551FF23274710A90053649E /* Alamofire in Frameworks */,
+				8551FF20274710970053649E /* PureSwiftUI in Frameworks */,
+				8551FF372747117E0053649E /* DynamicColor in Frameworks */,
+				8551FF1D274710840053649E /* SwiftUIX in Frameworks */,
+				8551FF2F274711270053649E /* MediaCore in Frameworks */,
+				8551FF31274711270053649E /* MediaSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,10 +115,15 @@
 		8551FF0927470FF20053649E /* junctionapp */ = {
 			isa = PBXGroup;
 			children = (
+				8551FF4C2747C99B0053649E /* Views */,
+				8551FF41274715270053649E /* Common */,
+				8551FF392747124A0053649E /* Services */,
+				8551FF38274712410053649E /* Screens */,
 				8551FF0A27470FF20053649E /* junctionappApp.swift */,
 				8551FF0C27470FF20053649E /* ContentView.swift */,
 				8551FF0E27470FF30053649E /* Assets.xcassets */,
 				8551FF1027470FF30053649E /* Preview Content */,
+				85BA7ED52748129500DF4F43 /* Launch Screen.storyboard */,
 			);
 			path = junctionapp;
 			sourceTree = "<group>";
@@ -65,6 +134,93 @@
 				8551FF1127470FF30053649E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8551FF38274712410053649E /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				8551FF3A274712500053649E /* Main */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		8551FF392747124A0053649E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8551FF5A2747CDFC0053649E /* NetworkService */,
+				8551FF3F2747129C0053649E /* NetworkService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8551FF3A274712500053649E /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8551FF3B2747125B0053649E /* MainView.swift */,
+				8551FF3D274712640053649E /* MainViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		8551FF41274715270053649E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8551FF482747C91B0053649E /* Colors.swift */,
+				8551FF4A2747C95B0053649E /* Fonts.swift */,
+				8551FF582747CB820053649E /* Theme.swift */,
+				8551FF452747C5F00053649E /* Models */,
+				8551FF422747152B0053649E /* Extensions */,
+				8551FF622747D1230053649E /* ViewModel.swift */,
+				8551FF642747D1E10053649E /* Notifications.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		8551FF422747152B0053649E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8551FF432747153B0053649E /* Alamofire+async.swift */,
+				8551FF542747C9F40053649E /* Collection+safe.swift */,
+				8551FF5D2747CEFE0053649E /* Encodable+dict.swift */,
+				8551FF662747D22F0053649E /* Alert+stringExpr.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8551FF452747C5F00053649E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8551FF462747C5FD0053649E /* MainModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8551FF4C2747C99B0053649E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8551FF4D2747C9A40053649E /* Text */,
+				8551FF562747CB2C0053649E /* ButtonStyles.swift */,
+				8551FF682747D2EA0053649E /* ActivityIndicator.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8551FF4D2747C9A40053649E /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				8551FF4E2747C9AA0053649E /* Title.swift */,
+				8551FF502747C9B20053649E /* Subtitle.swift */,
+				8551FF522747C9C70053649E /* Caption.swift */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
+		8551FF5A2747CDFC0053649E /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				8551FF5B2747CE070053649E /* NetworkService+main.swift */,
+			);
+			path = NetworkService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +239,20 @@
 			dependencies = (
 			);
 			name = junctionapp;
+			packageProductDependencies = (
+				8551FF1C274710840053649E /* SwiftUIX */,
+				8551FF1F274710970053649E /* PureSwiftUI */,
+				8551FF22274710A90053649E /* Alamofire */,
+				8551FF25274710C70053649E /* Regex */,
+				8551FF28274710DF0053649E /* SkeletonUI */,
+				8551FF2B274710F10053649E /* SDWebImageSwiftUI */,
+				8551FF2E274711270053649E /* MediaCore */,
+				8551FF30274711270053649E /* MediaSwiftUI */,
+				8551FF33274711460053649E /* PopupView */,
+				8551FF362747117E0053649E /* DynamicColor */,
+				8551FF602747CF310053649E /* SwiftyJSON */,
+				8551FF6B2747FB430053649E /* SwiftUIPullToRefresh */,
+			);
 			productName = junctionapp;
 			productReference = 8551FF0727470FF20053649E /* junctionapp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +281,19 @@
 				Base,
 			);
 			mainGroup = 8551FEFE27470FF10053649E;
+			packageReferences = (
+				8551FF1B274710840053649E /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+				8551FF1E274710970053649E /* XCRemoteSwiftPackageReference "pure-swift-ui" */,
+				8551FF21274710A90053649E /* XCRemoteSwiftPackageReference "Alamofire" */,
+				8551FF24274710C70053649E /* XCRemoteSwiftPackageReference "Regex" */,
+				8551FF27274710DF0053649E /* XCRemoteSwiftPackageReference "SkeletonUI" */,
+				8551FF2A274710F10053649E /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				8551FF2D274711270053649E /* XCRemoteSwiftPackageReference "Media" */,
+				8551FF32274711460053649E /* XCRemoteSwiftPackageReference "PopupView" */,
+				8551FF352747117E0053649E /* XCRemoteSwiftPackageReference "DynamicColor" */,
+				8551FF5F2747CF310053649E /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				8551FF6A2747FB430053649E /* XCRemoteSwiftPackageReference "swiftui-pull-to-refresh" */,
+			);
 			productRefGroup = 8551FF0827470FF20053649E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,6 +308,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85BA7ED62748129500DF4F43 /* Launch Screen.storyboard in Resources */,
 				8551FF1227470FF30053649E /* Preview Assets.xcassets in Resources */,
 				8551FF0F27470FF30053649E /* Assets.xcassets in Resources */,
 			);
@@ -137,8 +321,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8551FF4F2747C9AA0053649E /* Title.swift in Sources */,
+				8551FF652747D1E10053649E /* Notifications.swift in Sources */,
+				8551FF552747C9F40053649E /* Collection+safe.swift in Sources */,
+				8551FF402747129C0053649E /* NetworkService.swift in Sources */,
+				8551FF692747D2EA0053649E /* ActivityIndicator.swift in Sources */,
+				8551FF532747C9C70053649E /* Caption.swift in Sources */,
+				8551FF512747C9B20053649E /* Subtitle.swift in Sources */,
+				8551FF5E2747CEFE0053649E /* Encodable+dict.swift in Sources */,
+				8551FF492747C91B0053649E /* Colors.swift in Sources */,
+				8551FF442747153B0053649E /* Alamofire+async.swift in Sources */,
 				8551FF0D27470FF20053649E /* ContentView.swift in Sources */,
+				8551FF472747C5FD0053649E /* MainModel.swift in Sources */,
+				8551FF632747D1230053649E /* ViewModel.swift in Sources */,
+				8551FF3C2747125B0053649E /* MainView.swift in Sources */,
 				8551FF0B27470FF20053649E /* junctionappApp.swift in Sources */,
+				8551FF572747CB2C0053649E /* ButtonStyles.swift in Sources */,
+				8551FF592747CB820053649E /* Theme.swift in Sources */,
+				8551FF4B2747C95B0053649E /* Fonts.swift in Sources */,
+				8551FF3E274712640053649E /* MainViewModel.swift in Sources */,
+				8551FF672747D22F0053649E /* Alert+stringExpr.swift in Sources */,
+				8551FF5C2747CE070053649E /* NetworkService+main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,9 +475,11 @@
 				DEVELOPMENT_TEAM = 99C2LB4W93;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = junctionapp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -301,9 +506,11 @@
 				DEVELOPMENT_TEAM = 99C2LB4W93;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = junctionapp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -341,6 +548,160 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8551FF1B274710840053649E /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.9;
+			};
+		};
+		8551FF1E274710970053649E /* XCRemoteSwiftPackageReference "pure-swift-ui" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CodeSlicing/pure-swift-ui.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		8551FF21274710A90053649E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		8551FF24274710C70053649E /* XCRemoteSwiftPackageReference "Regex" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sharplet/Regex.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		8551FF27274710DF0053649E /* XCRemoteSwiftPackageReference "SkeletonUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CSolanaM/SkeletonUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		8551FF2A274710F10053649E /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		8551FF2D274711270053649E /* XCRemoteSwiftPackageReference "Media" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/crelies/Media.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		8551FF32274711460053649E /* XCRemoteSwiftPackageReference "PopupView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/PopupView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		8551FF352747117E0053649E /* XCRemoteSwiftPackageReference "DynamicColor" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yannickl/DynamicColor.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		8551FF5F2747CF310053649E /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		8551FF6A2747FB430053649E /* XCRemoteSwiftPackageReference "swiftui-pull-to-refresh" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/globulus/swiftui-pull-to-refresh.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8551FF1C274710840053649E /* SwiftUIX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8551FF1B274710840053649E /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			productName = SwiftUIX;
+		};
+		8551FF1F274710970053649E /* PureSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8551FF1E274710970053649E /* XCRemoteSwiftPackageReference "pure-swift-ui" */;
+			productName = PureSwiftUI;
+		};
+		8551FF22274710A90053649E /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8551FF21274710A90053649E /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		8551FF25274710C70053649E /* Regex */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8551FF24274710C70053649E /* XCRemoteSwiftPackageReference "Regex" */;
+			productName = Regex;
+		};
+		8551FF28274710DF0053649E /* SkeletonUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8551FF27274710DF0053649E /* XCRemoteSwiftPackageReference "SkeletonUI" */;
+			productName = SkeletonUI;
+		};
+		8551FF2B274710F10053649E /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8551FF2A274710F10053649E /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		8551FF2E274711270053649E /* MediaCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8551FF2D274711270053649E /* XCRemoteSwiftPackageReference "Media" */;
+			productName = MediaCore;
+		};
+		8551FF30274711270053649E /* MediaSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8551FF2D274711270053649E /* XCRemoteSwiftPackageReference "Media" */;
+			productName = MediaSwiftUI;
+		};
+		8551FF33274711460053649E /* PopupView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8551FF32274711460053649E /* XCRemoteSwiftPackageReference "PopupView" */;
+			productName = PopupView;
+		};
+		8551FF362747117E0053649E /* DynamicColor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8551FF352747117E0053649E /* XCRemoteSwiftPackageReference "DynamicColor" */;
+			productName = DynamicColor;
+		};
+		8551FF602747CF310053649E /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8551FF5F2747CF310053649E /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		8551FF6B2747FB430053649E /* SwiftUIPullToRefresh */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8551FF6A2747FB430053649E /* XCRemoteSwiftPackageReference "swiftui-pull-to-refresh" */;
+			productName = SwiftUIPullToRefresh;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8551FEFF27470FF10053649E /* Project object */;
 }
