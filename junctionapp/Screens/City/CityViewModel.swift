@@ -7,13 +7,51 @@
 
 import Foundation
 import MapKit
+import Combine
+import SwiftUI
 
 class CityViewModel: ViewModel {
     @Published var houses: [HouseModel]?
     @Published var query = ""
-
+    @Published var selectedSections = Set<Int>()
+    
+    @Published var region: MKCoordinateRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
+    @Published var markerUp = false
+    @Published var markerLocation: CoordModel?
+    @Published var markerPosition: String = ""
+    
+    func didChangeMarkerLocation() {
+        guard let coord = markerLocation?.coord else { return }
+        let address = CLGeocoder.init()
+        address.reverseGeocodeLocation(.init(latitude: coord.latitude, longitude: coord.longitude)) { (places, error) in
+            if error == nil{
+                if let place = places?.first?.postalAddress {
+                    withAnimation {
+                        self.markerPosition = [place.city, place.street].compactMap { $0 }.joined(separator: ", ")
+                    }
+                }
+            }
+        }
+    }
+    
     private let nw = NetworkService.shared
 
+    private var subscriptions = Set<AnyCancellable>()
+        
+    override init() {
+        super.init()
+        
+        $region
+            .debounce(for: .seconds(1), scheduler: DispatchQueue.main)
+            .sink(receiveValue: { t in
+                withAnimation {
+                    self.markerUp = false
+                    self.didChangeMarkerLocation()
+                }
+            } )
+            .store(in: &subscriptions)
+    }
+    
     var housesCenter: CLLocationCoordinate2D? {
         guard let houses = houses else {
             return nil
@@ -37,7 +75,12 @@ class CityViewModel: ViewModel {
                 .init(coordinate: .init(latitude: 47.6062, longitude: 122.3321))
             ]//try await nw.fetchData(.init(test: "test"))
         } catch {
+            notifications.alert = "Oops, error!"
             houses = nil
         }
+    }
+
+    func search(_ coord: CoordModel) {
+        
     }
 }

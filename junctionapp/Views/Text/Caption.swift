@@ -23,8 +23,7 @@ struct Caption: View {
     var body: some View {
         Text(verbatim)
             .scaleEffect(isSelected ? 1.2 : 1)
-            .foregroundColor(isSelected ? theme.text : theme.secondaryText)
-            .fontSize(12)
-            .height(15)
+            .foregroundColor(isSelected ? theme.textAccent : theme.secondaryText)
+            .fontSize(13)
     }
 }

@@ -7,7 +7,6 @@
 
 import SwiftUI
 import SwiftUIX
-import SwiftUIPullToRefresh
 import MapKit
 
 struct MainView: View {
@@ -40,7 +39,6 @@ struct MainView: View {
         .task {
             await viewModel.task()
         }
-        .modifier(NotificationsViewModifier(viewModel: .init()))
     }
         
 }

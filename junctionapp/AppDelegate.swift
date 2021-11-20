@@ -16,12 +16,12 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         print("Your code here")
         
-        SwiftLocation.onRestoreVisits = AppDelegate.onRestoreVisitsRequests
-        
-        SwiftLocation.restoreState()
-        
-        let activeRequest = SwiftLocation.visits(activityType: .other)
-        AppDelegate.attachSubscribersToVisitsRegions([activeRequest])
+//        SwiftLocation.onRestoreVisits = AppDelegate.onRestoreVisitsRequests
+//        
+//        SwiftLocation.restoreState()
+//        
+//        let activeRequest = SwiftLocation.visits(activityType: .other)
+//        AppDelegate.attachSubscribersToVisitsRegions([activeRequest])
         
         return true
     }

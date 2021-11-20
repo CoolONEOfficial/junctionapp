@@ -7,6 +7,7 @@
 
 import SwiftUI
 import UserNotifications
+import MapKit
 
 struct ContentView: View {
     @StateObject var notifications = Notifications.shared
@@ -26,13 +27,8 @@ struct ContentView: View {
         }.overlay {
             ActivityIndicator(isLoading: notifications.isLoading)
         }
-        .task {
-            do {
-                try await UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound])
-            } catch {
-                debugPrint(error)
-            }
-        }
+        .modifier(NotificationsViewModifier(viewModel: .init()))
+        .modifier(AvatarViewModifier(viewModel: .init()))
     }
 }
 

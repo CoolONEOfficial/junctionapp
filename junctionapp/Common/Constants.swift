@@ -1,12 +1,13 @@
 //
-//  NotificationModel.swift
+//  Constants.swift
 //  junctionapp
 //
 //  Created by Nickolay Truhin on 20.11.2021.
 //
 
 import Foundation
+import UIKit
 
-struct NotificationModel: Codable {
-    let name: String?
+enum Constants {
+    static let cornerRadius: CGFloat = 16
 }

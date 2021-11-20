@@ -10,12 +10,18 @@ import SwiftUI
 
 struct Subtitle: View {
     let verbatim: String
+    let weight: Font.Weight
+    let color: Color?
     
-    init(_ str: String) {
+    @EnvironmentObject var theme: Theme
+    
+    init(_ str: String, weight: Font.Weight = .bold, color: Color? = nil) {
         self.verbatim = str
+        self.weight = weight
+        self.color = color
     }
     
     var body: some View {
-        Text(verbatim).bold().fontSize(18).height(22)
+        Text(verbatim).foregroundColor(color ?? theme.text).fontWeight(weight).bold().fontSize(16)
     }
 }
