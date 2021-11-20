@@ -63,6 +63,17 @@
 		858BDC6B27493F0000FD5DCA /* DividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858BDC6A27493F0000FD5DCA /* DividerView.swift */; };
 		858BDC6D2749408C00FD5DCA /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858BDC6C2749408C00FD5DCA /* BottomSheetView.swift */; };
 		858BDC70274940D700FD5DCA /* EventSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858BDC6F274940D700FD5DCA /* EventSheetView.swift */; };
+		858BDC7427495C7600FD5DCA /* NetworkService+buildings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858BDC7327495C7600FD5DCA /* NetworkService+buildings.swift */; };
+		858BDC7627495D8000FD5DCA /* BuildingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858BDC7527495D8000FD5DCA /* BuildingModel.swift */; };
+		858BDC7827495DF600FD5DCA /* BlockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858BDC7727495DF600FD5DCA /* BlockModel.swift */; };
+		858BDC7A27495E4000FD5DCA /* ChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858BDC7927495E4000FD5DCA /* ChartModel.swift */; };
+		858BDC7C27495E8200FD5DCA /* SensorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858BDC7B27495E8200FD5DCA /* SensorModel.swift */; };
+		858BDC7F2749613000FD5DCA /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 858BDC7E2749613000FD5DCA /* SwiftDate */; };
+		858BDC812749792E00FD5DCA /* Int+random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858BDC802749792E00FD5DCA /* Int+random.swift */; };
+		858BDC8327497AE200FD5DCA /* MapKit++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858BDC8227497AE200FD5DCA /* MapKit++.swift */; };
+		858BDC8527497E7000FD5DCA /* UnitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858BDC8427497E7000FD5DCA /* UnitModel.swift */; };
+		858BDC872749951100FD5DCA /* View+skeleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858BDC862749951100FD5DCA /* View+skeleton.swift */; };
+		858BDC8A2749A30600FD5DCA /* DatePickerSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858BDC892749A30600FD5DCA /* DatePickerSheetView.swift */; };
 		85BA7ED62748129500DF4F43 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85BA7ED52748129500DF4F43 /* Launch Screen.storyboard */; };
 		85DBF3CA2748AF2A0080312D /* LightChart in Frameworks */ = {isa = PBXBuildFile; productRef = 85DBF3C92748AF2A0080312D /* LightChart */; };
 		85DBF3CC2748E6290080312D /* Environment+safeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DBF3CB2748E6290080312D /* Environment+safeArea.swift */; };
@@ -116,6 +127,16 @@
 		858BDC6A27493F0000FD5DCA /* DividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerView.swift; sourceTree = "<group>"; };
 		858BDC6C2749408C00FD5DCA /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
 		858BDC6F274940D700FD5DCA /* EventSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSheetView.swift; sourceTree = "<group>"; };
+		858BDC7327495C7600FD5DCA /* NetworkService+buildings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkService+buildings.swift"; sourceTree = "<group>"; };
+		858BDC7527495D8000FD5DCA /* BuildingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingModel.swift; sourceTree = "<group>"; };
+		858BDC7727495DF600FD5DCA /* BlockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockModel.swift; sourceTree = "<group>"; };
+		858BDC7927495E4000FD5DCA /* ChartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartModel.swift; sourceTree = "<group>"; };
+		858BDC7B27495E8200FD5DCA /* SensorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorModel.swift; sourceTree = "<group>"; };
+		858BDC802749792E00FD5DCA /* Int+random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+random.swift"; sourceTree = "<group>"; };
+		858BDC8227497AE200FD5DCA /* MapKit++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapKit++.swift"; sourceTree = "<group>"; };
+		858BDC8427497E7000FD5DCA /* UnitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitModel.swift; sourceTree = "<group>"; };
+		858BDC862749951100FD5DCA /* View+skeleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+skeleton.swift"; sourceTree = "<group>"; };
+		858BDC892749A30600FD5DCA /* DatePickerSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerSheetView.swift; sourceTree = "<group>"; };
 		85BA7ED52748129500DF4F43 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		85DBF3CB2748E6290080312D /* Environment+safeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Environment+safeArea.swift"; sourceTree = "<group>"; };
 		85DBF3CD274901770080312D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -130,6 +151,7 @@
 			files = (
 				8551FF2C274710F10053649E /* SDWebImageSwiftUI in Frameworks */,
 				8551FF29274710DF0053649E /* SkeletonUI in Frameworks */,
+				858BDC7F2749613000FD5DCA /* SwiftDate in Frameworks */,
 				8551FF26274710C70053649E /* Regex in Frameworks */,
 				8551FF34274711460053649E /* PopupView in Frameworks */,
 				8551FF23274710A90053649E /* Alamofire in Frameworks */,
@@ -240,6 +262,9 @@
 				8551FF5D2747CEFE0053649E /* Encodable+dict.swift */,
 				8551FF662747D22F0053649E /* Alert+stringExpr.swift */,
 				85DBF3CB2748E6290080312D /* Environment+safeArea.swift */,
+				858BDC802749792E00FD5DCA /* Int+random.swift */,
+				858BDC8227497AE200FD5DCA /* MapKit++.swift */,
+				858BDC862749951100FD5DCA /* View+skeleton.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -253,6 +278,11 @@
 				855DAB1A274855D700BE2AAB /* CoordModel.swift */,
 				85DBF3D227490CE20080312D /* EventModel.swift */,
 				858BDC66274933B600FD5DCA /* AvatarModel.swift */,
+				858BDC7527495D8000FD5DCA /* BuildingModel.swift */,
+				858BDC7727495DF600FD5DCA /* BlockModel.swift */,
+				858BDC7927495E4000FD5DCA /* ChartModel.swift */,
+				858BDC7B27495E8200FD5DCA /* SensorModel.swift */,
+				858BDC8427497E7000FD5DCA /* UnitModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -288,6 +318,7 @@
 				855DAB112748531900BE2AAB /* NetworkService+notification.swift */,
 				855DAB212748657100BE2AAB /* NetworkService+visit.swift */,
 				858BDC682749357900FD5DCA /* NetworkService+avatar.swift */,
+				858BDC7327495C7600FD5DCA /* NetworkService+buildings.swift */,
 			);
 			path = NetworkService;
 			sourceTree = "<group>";
@@ -295,6 +326,7 @@
 		855DAB07274837AA00BE2AAB /* City */ = {
 			isa = PBXGroup;
 			children = (
+				858BDC882749A2EB00FD5DCA /* DatePicker */,
 				858BDC6E274940C500FD5DCA /* Event */,
 				85DBF3CF27490BE50080312D /* Views */,
 				855DAB0A27483B3D00BE2AAB /* CityViewModel.swift */,
@@ -327,6 +359,14 @@
 				858BDC6F274940D700FD5DCA /* EventSheetView.swift */,
 			);
 			path = Event;
+			sourceTree = "<group>";
+		};
+		858BDC882749A2EB00FD5DCA /* DatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				858BDC892749A30600FD5DCA /* DatePickerSheetView.swift */,
+			);
+			path = DatePicker;
 			sourceTree = "<group>";
 		};
 		85DBF3CF27490BE50080312D /* Views */ = {
@@ -370,6 +410,7 @@
 				855DAB2C2748826700BE2AAB /* Introspect */,
 				855DAB322748956200BE2AAB /* Snap */,
 				85DBF3C92748AF2A0080312D /* LightChart */,
+				858BDC7E2749613000FD5DCA /* SwiftDate */,
 			);
 			productName = junctionapp;
 			productReference = 8551FF0727470FF20053649E /* junctionapp.app */;
@@ -413,6 +454,7 @@
 				855DAB2B2748826700BE2AAB /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 				855DAB312748956200BE2AAB /* XCRemoteSwiftPackageReference "Snap" */,
 				85DBF3C82748AF2A0080312D /* XCRemoteSwiftPackageReference "LightChart" */,
+				858BDC7D2749613000FD5DCA /* XCRemoteSwiftPackageReference "SwiftDate" */,
 			);
 			productRefGroup = 8551FF0827470FF20053649E /* Products */;
 			projectDirPath = "";
@@ -444,14 +486,17 @@
 				8551FF4F2747C9AA0053649E /* Title.swift in Sources */,
 				85DBF3CC2748E6290080312D /* Environment+safeArea.swift in Sources */,
 				8551FF652747D1E10053649E /* Notifications.swift in Sources */,
+				858BDC872749951100FD5DCA /* View+skeleton.swift in Sources */,
 				855DAB3627489E0700BE2AAB /* PlainCard.swift in Sources */,
 				858BDC632749316F00FD5DCA /* AvatarViewModifier.swift in Sources */,
 				858BDC67274933B600FD5DCA /* AvatarModel.swift in Sources */,
 				8551FF552747C9F40053649E /* Collection+safe.swift in Sources */,
 				855DAB122748531900BE2AAB /* NetworkService+notification.swift in Sources */,
+				858BDC7427495C7600FD5DCA /* NetworkService+buildings.swift in Sources */,
 				855DAB062748353000BE2AAB /* MapView.swift in Sources */,
 				858BDC692749357900FD5DCA /* NetworkService+avatar.swift in Sources */,
 				8551FF402747129C0053649E /* NetworkService.swift in Sources */,
+				858BDC7627495D8000FD5DCA /* BuildingModel.swift in Sources */,
 				8551FF692747D2EA0053649E /* ActivityIndicator.swift in Sources */,
 				855DAB0D2748459100BE2AAB /* HouseModel.swift in Sources */,
 				85DBF3D127490C6E0080312D /* EventView.swift in Sources */,
@@ -461,12 +506,18 @@
 				8551FF512747C9B20053649E /* Subtitle.swift in Sources */,
 				8551FF5E2747CEFE0053649E /* Encodable+dict.swift in Sources */,
 				855DAB09274837E600BE2AAB /* CityView.swift in Sources */,
+				858BDC812749792E00FD5DCA /* Int+random.swift in Sources */,
 				8551FF492747C91B0053649E /* Colors.swift in Sources */,
+				858BDC7827495DF600FD5DCA /* BlockModel.swift in Sources */,
+				858BDC7A27495E4000FD5DCA /* ChartModel.swift in Sources */,
+				858BDC7C27495E8200FD5DCA /* SensorModel.swift in Sources */,
 				8551FF442747153B0053649E /* Alamofire+async.swift in Sources */,
 				8551FF0D27470FF20053649E /* ContentView.swift in Sources */,
+				858BDC8327497AE200FD5DCA /* MapKit++.swift in Sources */,
 				8551FF472747C5FD0053649E /* MainModel.swift in Sources */,
 				8551FF632747D1230053649E /* ViewModel.swift in Sources */,
 				8551FF3C2747125B0053649E /* MainView.swift in Sources */,
+				858BDC8A2749A30600FD5DCA /* DatePickerSheetView.swift in Sources */,
 				855DAB142748533C00BE2AAB /* NotificationModel.swift in Sources */,
 				8551FF0B27470FF20053649E /* junctionappApp.swift in Sources */,
 				8551FF572747CB2C0053649E /* ButtonStyles.swift in Sources */,
@@ -476,6 +527,7 @@
 				855DAB1D2748571E00BE2AAB /* AppDelegate.swift in Sources */,
 				8551FF592747CB820053649E /* Theme.swift in Sources */,
 				858BDC6B27493F0000FD5DCA /* DividerView.swift in Sources */,
+				858BDC8527497E7000FD5DCA /* UnitModel.swift in Sources */,
 				855DAB162748541C00BE2AAB /* NotificationsViewModifier.swift in Sources */,
 				855DAB0B27483B3D00BE2AAB /* CityViewModel.swift in Sources */,
 				8551FF4B2747C95B0053649E /* Fonts.swift in Sources */,
@@ -796,6 +848,14 @@
 				kind = branch;
 			};
 		};
+		858BDC7D2749613000FD5DCA /* XCRemoteSwiftPackageReference "SwiftDate" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/malcommac/SwiftDate";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 		85DBF3C82748AF2A0080312D /* XCRemoteSwiftPackageReference "LightChart" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pichukov/LightChart";
@@ -871,6 +931,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 855DAB312748956200BE2AAB /* XCRemoteSwiftPackageReference "Snap" */;
 			productName = Snap;
+		};
+		858BDC7E2749613000FD5DCA /* SwiftDate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 858BDC7D2749613000FD5DCA /* XCRemoteSwiftPackageReference "SwiftDate" */;
+			productName = SwiftDate;
 		};
 		85DBF3C92748AF2A0080312D /* LightChart */ = {
 			isa = XCSwiftPackageProductDependency;

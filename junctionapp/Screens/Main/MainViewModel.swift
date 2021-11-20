@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class MainViewModel: ViewModel {
     @Published var data: [MainModel]?
@@ -14,8 +15,14 @@ class MainViewModel: ViewModel {
 
     @MainActor
     func task() async {
-        notifications.isLoading = true
-        defer { notifications.isLoading = false }
+        withAnimation {
+            notifications.isLoading = true
+        }
+        defer {
+            withAnimation {
+                notifications.isLoading = false
+            }
+        }
 
         do {
             data = try await nw.fetchData()

@@ -24,7 +24,7 @@ struct ContentView: View {
             notifications.alert = $0 ? notifications.alert : nil
         })) {
             notifications.alert ?? .init(title: Text(""), message: nil, dismissButton: nil)
-        }.overlay {
+        }.blurIf(notifications.isLoading, Constants.blur).overlay {
             ActivityIndicator(isLoading: notifications.isLoading)
         }
         .modifier(NotificationsViewModifier(viewModel: .init()))

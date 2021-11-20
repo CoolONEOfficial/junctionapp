@@ -10,7 +10,7 @@ import SwiftUI
 
 class AvatarViewModel: ViewModel {
     
-    @Published var avatar: AvatarModel?
+    @Published var avatar: AvatarModel?// = .init(state: .fun2, message: "f sjfkl sjflk jsl fjsldjf lsj fk jlsj fljs fjslfj lsjf sjlf jslk jflsj ljs lfjl j jlj l ljsfj ljf lsjf lkjslfj slfjslfj")
     private let nw = NetworkService.shared
 
     @MainActor

@@ -13,12 +13,24 @@ import PureSwiftUI
 import DynamicColor
 import LightChart
 import Snap
+import SwiftDate
+
+enum SectionType: String, CaseIterable {
+    case water = "Water"
+    case energy = "Energy"
+    case exhaust = "Exhaust"
+}
 
 struct BottomSheetView: View {
     @StateObject var viewModel: CityViewModel
     @EnvironmentObject var theme: Theme
     @Binding var state: Snap.AppleMapsSnapState
     @State var isEditing = false
+    @State var totalUnit: UnitModel?
+    
+    var totalUnitVal: UnitModel? {
+        totalUnit ?? viewModel.buildings?.totals.first?.unit
+    }
     
     @Binding var eventSheet: EventModel?
     
@@ -33,12 +45,11 @@ struct BottomSheetView: View {
             VStack(alignment: .leading, spacing: 0) {
                 Group {
                     SearchBar(text: $viewModel.query, onEditingChanged: isEditingDidChange, onCommit: onCommit).textFieldBackgroundColor(theme.secondary).placeholder("Search...")
-                        .padding(.horizontal, 14).padding(.top, isEditing ? 110 : -10)
+                        .padding(.horizontal, 14).padding(.top, isEditing ? 120 : -10)
                     
                     SectionsView(sections: SectionType.allCases.map(\.rawValue), selectedIndexes: $viewModel.selectedSections).padding(.horizontal, -8)
                         .padding(.bottom, state == .large ? -8 : 0)
                 }
-                
                 
                 if state != .tiny {
                     secondPart
@@ -58,11 +69,6 @@ struct BottomSheetView: View {
         }
     }
     
-    enum SectionType: String, CaseIterable {
-        case water = "Water"
-        case energy = "Energy"
-    }
-    
     var mainScrollContent: some View {
         ScrollView {
             VStack(alignment: .leading) {
@@ -70,7 +76,7 @@ struct BottomSheetView: View {
                                type: .curved,
                                visualType: .filled(color: theme.textAccent, lineWidth: 3),
                                offset: 0.2,
-                               currentValueLineType: .dash(color: .white, lineWidth: 1, dash: [1])
+                               currentValueLineType: .dash(color: .white, lineWidth: 2, dash: [2])
                 ).aspectRatio(328/71, contentMode: .fit).padding(.vertical, 30).padding(.horizontal, -20)
                 
                 Title("Today")
@@ -88,45 +94,92 @@ struct BottomSheetView: View {
         }
     }
     
+    var blocks: [BlockModel] {
+        viewModel.buildings?.buildings.map(\.blocks).reduce([], +) ?? [ .mock, .mock, .mock ]
+    }
+    
+    var sensors: [SensorModel] {
+        let sensors = blocks.map(\.sensors).reduce([], +)
+        return sensors.isNotEmpty ? sensors : [ .mock, .mock, .mock ]
+    }
+
+    var total: BuildingsResponse.Total? {
+        viewModel.buildings?.totals.first(where: { $0.unit == self.totalUnitVal })
+    }
+    
+    var buildingsLoading: Bool {
+        viewModel.buildings == nil || viewModel.buildingsRefresh != nil
+    }
+    
     var secondPart: some View {
         VStack(spacing: 0) {
             VStack(alignment: .leading) {
                 if state == .medium {
                     Group {
-                        Subtitle("Blocks").padding(.vertical, 8)
-                        ScrollView(.horizontal) {
-                            LazyHStack {
-                                PlainCard(text: "Test", state: .bad, type: nil).aspectRatio(134/50, contentMode: .fit)
-                            }
-                        }.height(70)
-                        Subtitle("Entities").padding(.vertical, 8)
-                        ScrollView(.horizontal) {
-                            LazyHStack {
-                                PlainCard(text: "Test", state: .bad, type: .washer).aspectRatio(97/79, contentMode: .fit)
-                            }
-                        }.height(120)
+                        Subtitle("Spaces").padding(.vertical, 8)
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack {
+                                ForEach(blocks.prefix(5)) { block in
+                                    Button(action: {
+                                        withAnimation {
+                                            viewModel.selectedBlock = block
+                                        }
+                                    }) {
+                                        PlainCard(block, isSelected: block == viewModel.selectedBlock, skelet: buildingsLoading).aspectRatio(134/50, contentMode: .fit).id(block.id)
+                                    }
+                                }
+                            }.padding(.horizontal, 20)
+                        }.height(70).padding(.horizontal, -20)
+                        Subtitle("Devices").padding(.vertical, 8)
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack {
+                                ForEach(sensors.prefix(5)) { sensor in
+                                    Button(action: {
+                                        withAnimation {
+                                            viewModel.selectedSensor = sensor
+                                        }
+                                    }) {
+                                        PlainCard(sensor, isSelected: sensor == viewModel.selectedSensor, skelet: buildingsLoading).aspectRatio(97/79, contentMode: .fit).id(sensor.id)
+                                    }
+                                }
+                            }.padding(.horizontal, 20)
+                        }.height(120).padding(.horizontal, -20)
                     }
                 }
                 
                 DividerView().padding(.horizontal, -20)
                 
-                HStack(spacing: 6) {
-                    Title("Spending in")
+                HStack(spacing: 0) {
                     Button(action: {
-                        
+                        withAnimation {
+                            viewModel.datePicker = true
+                        }
                     }, label: {
-                        Title("november", color: theme.textAccent)
+                        Title(DateInRegion(viewModel.endDate).monthName(.default), color: theme.textAccent)
                     })
+                    Title("expenses").padding(.horizontal, 6)
                     
                     Spacer()
-                    Title("-65523 ml", weight: .regular)
+                    
+                    Button(action: nextUnit, label: {
+                        Title("-\(String(format: "%.2f", total?.values ?? 0)) \(total?.unit.name ?? "")", weight: .regular).lineLimit(1).skelet(buildingsLoading).cornerRadius(Constants.cornerRadius).id(total?.unit.name ?? "").height(30)
+                    }).disabled((viewModel.buildings?.totals.count ?? 0) <= 1)
                 }.padding(.bottom, 8).padding(.top, -8)
-                
                 
             }.padding(.horizontal, 20)
         }
     }
     
+    func nextUnit() {
+        guard let units = viewModel.buildings?.totals.compactMap({ $0.unit }),
+              let totalUnitVal = totalUnitVal,
+              let currentIndex = units.firstIndex(of: totalUnitVal) else { return }
+       
+        withAnimation {
+            totalUnit = currentIndex + 1 < units.count ? units[currentIndex + 1] : units[0]
+        }
+    }
+
     func isEditingDidChange(isEditing: Bool) {
         self.isEditing = isEditing
         if isEditing {
@@ -137,8 +190,9 @@ struct BottomSheetView: View {
     }
     
     func onCommit() {
-        Task {
-            await viewModel.update()
-        }
+//        Task {
+//            await viewModel.update()
+//        }
     }
+
 }
