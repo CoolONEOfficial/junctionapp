@@ -20,6 +20,8 @@ class CityViewModel: ViewModel {
     @Published var markerLocation: CoordModel?
     @Published var markerPosition: String = ""
     
+    @Published var eventSheet: EventModel? = .init(name: "Name", sensorName: "Secson", value: 123, clusterName: "Cluster", count: 3, isEcoFriendly: false)
+    
     func didChangeMarkerLocation() {
         guard let coord = markerLocation?.coord else { return }
         let address = CLGeocoder.init()

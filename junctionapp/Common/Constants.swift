@@ -10,4 +10,5 @@ import UIKit
 
 enum Constants {
     static let cornerRadius: CGFloat = 16
+    static let blur: CGFloat = 10
 }

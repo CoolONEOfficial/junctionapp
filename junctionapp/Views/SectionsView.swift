@@ -9,10 +9,6 @@ import DynamicColor
 import Foundation
 import SwiftUI
 
-//protocol SectionModel {
-//    var title: String { get }
-//}
-
 struct SectionsView: View {
     
     @EnvironmentObject var theme: Theme

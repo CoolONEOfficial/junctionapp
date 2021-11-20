@@ -15,7 +15,7 @@ struct AvatarViewModifier: ViewModifier {
     func body(content: Content) -> some View {
         Group {
             if let avatar = viewModel.avatar {
-                content.blurIf(avatar.message != nil, 10).overlay(alignment: .topTrailing) {
+                content.blurIf(avatar.message != nil, Constants.blur).overlay(alignment: .topTrailing) {
                     VStack(alignment: .trailing) {
                         Text(avatar.state.emoji).fontSize(30).padding(10).background(Color.accent).clipCircle()
                         if let message = avatar.message {
