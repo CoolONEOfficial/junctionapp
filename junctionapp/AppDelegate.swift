@@ -12,16 +12,18 @@ import SwiftLocation
 
 public let NOTIFICATION_VISITS_DATA = Notification.Name("NOTIFICATION_VISITS_DATA")
 
-class AppDelegate: NSObject, UIApplicationDelegate {
+class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         print("Your code here")
         
-//        SwiftLocation.onRestoreVisits = AppDelegate.onRestoreVisitsRequests
-//        
-//        SwiftLocation.restoreState()
-//        
-//        let activeRequest = SwiftLocation.visits(activityType: .other)
-//        AppDelegate.attachSubscribersToVisitsRegions([activeRequest])
+        SwiftLocation.onRestoreVisits = AppDelegate.onRestoreVisitsRequests
+
+        SwiftLocation.restoreState()
+
+        let activeRequest = SwiftLocation.visits(activityType: .other)
+        AppDelegate.attachSubscribersToVisitsRegions([activeRequest])
+        
+        UNUserNotificationCenter.current().delegate = self
         
         return true
     }
@@ -66,6 +68,12 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         print("Restoring \(requests.count) visits requests...")
         attachSubscribersToVisitsRegions(requests)
     }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification,
+                                    withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+            // Forground notifications.
+            completionHandler([.alert, .sound])
+        }
     
     
 }

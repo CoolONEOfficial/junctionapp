@@ -10,6 +10,6 @@ import Alamofire
 
 extension NetworkService {
     func fetchNotification() async throws -> NotificationModel {
-        try await AF.request(apiBase + "/notifications").responseDecodable(of: NotificationModel.self)
+        try await AF.request(apiBase + "/push-events").responseDecodable(of: NotificationModel.self)
     }
 }

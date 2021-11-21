@@ -35,9 +35,9 @@ class NotificationsViewModel: ObservableObject {
         content.sound = .default
         //content.userInfo = notification.data TODO: notification userInfo
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-        try? await UNUserNotificationCenter.current().add(request)
+        try! await UNUserNotificationCenter.current().add(request)
     }
 
     func checkNotifications() {
