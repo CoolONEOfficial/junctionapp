@@ -9,10 +9,10 @@ import SwiftUI
 
 struct EventView: View {
     let event: EventModel
-    
+
     var body: some View {
         HStack(spacing: 12) {
-            let isEcoFriendly = event.isEcoFriendly ?? true
+            let isEcoFriendly = event.isEco == true || event.isAnomaly == false
             Ellipse().fill(isEcoFriendly ? Color.eco : Color.notEco).width(55).height(55).overlay {
                 Image(event.type.image).resizable().scaledToFit().width(35).height(35)
             }.overlay(alignment: .bottomTrailing) {

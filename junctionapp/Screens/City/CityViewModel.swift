@@ -16,9 +16,9 @@ class CityViewModel: ViewModel {
     @Published var buildings: BuildingsResponse? {
         didSet {
             if let point = buildings?.buildings.first(where: { $0.point != nil })?.point {
-                withAnimation {
-                    self.markerLocation = point
-                }
+                //withAnimation {
+                self.region = .init(center: .init(), span: .init())
+                //}
             }
             if (buildings?.buildings.map(\.blocks).reduce([], +).count ?? 0) > 1 {
                 self.allBuildings = buildings
@@ -67,7 +67,7 @@ class CityViewModel: ViewModel {
         }
     }
     
-    @Published var region: MKCoordinateRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
+    @Published var region: MKCoordinateRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 60.166892, longitude: 24.943592), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
     @Published var markerUp = false
     @Published var markerLocation: CoordModel?
     @Published var markerPosition: String = ""

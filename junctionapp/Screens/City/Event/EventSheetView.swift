@@ -64,7 +64,7 @@ struct EventSheetView: View {
                         .overlay(alignment: .bottom) {
                             Color.white.height(100).clipCircleWithStroke(Color.red, lineWidth: 4, strokeType: .center, fill: Color.white).padding(.bottom, -50)
                                 .overlay {
-                                    Image(event.type.image).resizable().scaledToFit().width(75).height(75)
+                                    Image(event.type.image).resizable().scaledToFit().width(65).height(65).padding(.bottom, -50)
                                 }
                         }
                     

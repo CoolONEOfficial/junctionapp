@@ -14,20 +14,35 @@ struct EventModel: Codable, Hashable {
     let value: Double
     let blockName: String
     let count: Int?
-    let isEcoFriendly: Bool?
+    let isEco: Bool?
+    let isAnomaly: Bool?
     let dateTime: Date
     let message: String?
-    let type: EventType = .faucet
+    let type: EventType
 }
 
 enum EventType: String, Codable {
-    case faucet
-    case loundry
-    case shower
-    case washer
+    case DISHWASHER_COLD, DISHWASHER_HOT, ELECTRICITY, MIXER_COLD, MIXER_HOT, SHOWER_COLD, SHOWER_HOT, WASHER_COLD, WASHER_HOT
+    
+    
+//    case faucet
+//    case loundry
+//    case shower
+//    case washer
     
     var image: String {
-        "Type\(rawValue.capitalizingFirstLetter())"
+        switch self {
+        case .DISHWASHER_COLD, .DISHWASHER_HOT:
+            return "TypeWasher"
+        case .ELECTRICITY:
+            return "TypeLoundry"
+        case .MIXER_COLD, .MIXER_HOT:
+            return "TypeFaucet"
+        case .SHOWER_COLD, .SHOWER_HOT:
+            return "TypeShower"
+        case .WASHER_COLD, .WASHER_HOT:
+            return "TypeLoundry"
+        }
     }
 }
 
@@ -36,6 +51,6 @@ extension EventModel: Identifiable {
 
 extension EventModel {
     static var mock: Self {
-        .init(name: "Name", sensorName: "sensor", value: 123, blockName: "Block name", count: 4, isEcoFriendly: true, dateTime: .now, message: "MEssage")
+        .init(name: "Name", sensorName: "sensor", value: 123, blockName: "Block name", count: 4, isEco: true, isAnomaly: nil, dateTime: .now, message: "MEssage", type: .ELECTRICITY)
     }
 }
