@@ -45,27 +45,34 @@ struct EventSheetView: View {
                     }
                 }
                 
-            }), large: .height(435), allowInvisible: true, backgroundColor: .systemBackground) { state in
-                VStack(alignment: .leading, spacing: 0) {
+            }), large: .height(335), allowInvisible: true, backgroundColor: .systemBackground) { state in
+                VStack(alignment: .center, spacing: 0) {
                 
                     RoundedRectangle(cornerRadius: Constants.cornerRadius)
                         .fill(LinearGradient([
                             Color(gradientColor.lighter(amount: 0.05)),
                             Color(gradientColor.darkened(amount: 0.05))
                         ], angle: Angle(degrees: 100)))
-                        .height(108).maxWidth(.infinity).padding(.top, -25)
+                        .height(128).maxWidth(.infinity).padding(.top, -25)
                         .overlay {
-                            VStack(spacing: 20) {
+                            VStack(spacing: 0) {
                                 Handle()
-                                Caption("2 november 2021, 14:30")
-                                Spacer()
-                                Color.white.height(100).clipCircleWithStroke(Color.red, lineWidth: 4, strokeType: .center, fill: Color.white).padding(.bottom, 15)
-                            }.padding(10)
+                                Text(event.dateTime.toFormat("d MMMM yyyy, HH:mm", locale: nil)).fontSize(13).foregroundColor(.white).padding(.top, 15)
+                            }
+                                .padding(.top, -75)
+                        }
+                        .overlay(alignment: .bottom) {
+                            Color.white.height(100).clipCircleWithStroke(Color.red, lineWidth: 4, strokeType: .center, fill: Color.white).padding(.bottom, -50)
                         }
                     
                 
-                    Text("event \(event.name ?? "")")
-                        
+                    
+                    Title("- \( String(format: "%.2f", event.value) )").fontSize(30).padding(.top, 70)
+                    
+                    Caption("\(event.name)").padding(.top, 10)
+                    if let message = event.message {
+                        Caption(message).padding(.top, 5)
+                    }
                     //Rectangle().fill(Color.blue).height(200).width(200)
                     Spacer()
                 }.background(Color(gradientColor).opacity(0.4)).padding(.bottom, -safeAreaInsets.bottom)

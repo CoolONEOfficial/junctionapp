@@ -12,29 +12,35 @@ struct EventView: View {
     
     var body: some View {
         HStack(spacing: 12) {
-            Ellipse().fill(event.isEcoFriendly ? Color.eco : Color.notEco).width(55).height(55).overlay(alignment: .bottomTrailing) {
-                if event.count > 1 {
-                    Ellipse().fill(event.isEcoFriendly ? Color.eco : Color.notEco).width(22).height(22)
+            let isEcoFriendly = event.isEcoFriendly ?? true
+            Ellipse().fill(isEcoFriendly ? Color.eco : Color.notEco).width(55).height(55).overlay(alignment: .bottomTrailing) {
+                if let count = event.count, count > 1 {
+                    Ellipse().fill(isEcoFriendly ? Color.eco : Color.notEco).width(22).height(22)
                         .strokeCircle(Color.white, lineWidth: 1).overlay {
-                        Text("x\(event.count)").fontSize(10)
+                        Text("x\(count)").fontSize(10)
                     }
                 }
             }
-            VStack {
-                Subtitle(event.name)
-                Caption(event.sensorName)
-            }
-            Spacer()
-            VStack {
-                Subtitle(event.name, weight: .regular)
-                Caption(event.clusterName)
-            }
+            VStack(spacing: 0) {
+                HStack(alignment: .top, spacing: 0) {
+                    Subtitle(event.name)
+                    Spacer()
+                    Caption(event.sensorName).multilineTextAlignment(.trailing)
+                }
+                Spacer()
+                HStack(alignment: .bottom, spacing: 0) {
+                    Subtitle(event.name, weight: .regular)
+                    Spacer()
+                    Caption(event.blockName).multilineTextAlignment(.trailing)
+                }
+            }.padding(.vertical, 14)
+            
         }
     }
 }
 
-struct EventView_Previews: PreviewProvider {
-    static var previews: some View {
-        EventView(event: .init(name: "Name", sensorName: "Secson", value: 123, clusterName: "Cluster", count: 3, isEcoFriendly: false))
-    }
-}
+//struct EventView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        EventView(event: .init(name: "Name", sensorName: "Secson", value: 123, clusterName: "Cluster", count: 3, isEcoFriendly: false))
+//    }
+//}

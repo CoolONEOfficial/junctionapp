@@ -23,6 +23,11 @@ struct BuildingsResponse: Codable {
     }
     let buildings: [BuildingModel]
     let totals: [Total]
+    let eventPage: EventPage
+
+    struct EventPage: Codable {
+        let events: [String: [EventModel]]
+    }
 }
 
 extension NetworkService {
@@ -31,7 +36,7 @@ extension NetworkService {
         let to: Date
     }
 
-    func fetchBuildings(_ req: BuildingsParams, types: Set<SectionType>) async throws -> BuildingsResponse {
+    func fetchBuildings(_ req: BuildingsParams, types: Set<SectionType>, block: BlockModel?, sensor: SensorModel?) async throws -> BuildingsResponse {
         var lastComp = ""
         
         if types.count == 1 {
@@ -41,7 +46,16 @@ extension NetworkService {
             default: break
             }
         }
+        
+        let entity: String
+        if let sensor = sensor {
+            entity = "sensors/\(sensor.id)"
+        } else if let block = block {
+            entity = "blocks/\(block.id)"
+        } else {
+            entity = "buildings"
+        }
 
-        return try await AF.request(apiBase + "/buildings/data\(lastComp)?from=\(dateFormatter.string(from: req.from))&to=\(dateFormatter.string(from: req.to))", parameters: req.dict).responseDecodable(of: BuildingsResponse.self, decoder: jsonDecoder)
+        return try await AF.request(apiBase + "/\(entity)/data\(lastComp)?from=\(dateFormatter.string(from: req.from))&to=\(dateFormatter.string(from: req.to))", parameters: req.dict).responseDecodable(of: BuildingsResponse.self, decoder: jsonDecoder)
     }
 }

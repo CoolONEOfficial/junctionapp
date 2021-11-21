@@ -8,16 +8,22 @@
 import Foundation
 
 struct EventModel: Codable, Hashable {
+    let id: Int64 = .random
     let name: String
     let sensorName: String
-    let value: Int
-    let clusterName: String
-    let count: Int
-    let isEcoFriendly: Bool
+    let value: Double
+    let blockName: String
+    let count: Int?
+    let isEcoFriendly: Bool?
+    let dateTime: Date
+    let message: String?
 }
 
 extension EventModel: Identifiable {
-    var id: Int {
-        hashValue
+}
+
+extension EventModel {
+    static var mock: Self {
+        .init(name: "Name", sensorName: "sensor", value: 123, blockName: "Block name", count: 4, isEcoFriendly: true, dateTime: .now, message: "MEssage")
     }
 }

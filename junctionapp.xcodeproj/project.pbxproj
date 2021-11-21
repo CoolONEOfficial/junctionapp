@@ -74,6 +74,8 @@
 		858BDC8527497E7000FD5DCA /* UnitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858BDC8427497E7000FD5DCA /* UnitModel.swift */; };
 		858BDC872749951100FD5DCA /* View+skeleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858BDC862749951100FD5DCA /* View+skeleton.swift */; };
 		858BDC8A2749A30600FD5DCA /* DatePickerSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858BDC892749A30600FD5DCA /* DatePickerSheetView.swift */; };
+		858BDC8C2749C60100FD5DCA /* String+capitalizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858BDC8B2749C60100FD5DCA /* String+capitalizing.swift */; };
+		858BDC8E2749C6F200FD5DCA /* ForecastChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858BDC8D2749C6F200FD5DCA /* ForecastChart.swift */; };
 		85BA7ED62748129500DF4F43 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85BA7ED52748129500DF4F43 /* Launch Screen.storyboard */; };
 		85DBF3CA2748AF2A0080312D /* LightChart in Frameworks */ = {isa = PBXBuildFile; productRef = 85DBF3C92748AF2A0080312D /* LightChart */; };
 		85DBF3CC2748E6290080312D /* Environment+safeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DBF3CB2748E6290080312D /* Environment+safeArea.swift */; };
@@ -137,6 +139,8 @@
 		858BDC8427497E7000FD5DCA /* UnitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitModel.swift; sourceTree = "<group>"; };
 		858BDC862749951100FD5DCA /* View+skeleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+skeleton.swift"; sourceTree = "<group>"; };
 		858BDC892749A30600FD5DCA /* DatePickerSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerSheetView.swift; sourceTree = "<group>"; };
+		858BDC8B2749C60100FD5DCA /* String+capitalizing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+capitalizing.swift"; sourceTree = "<group>"; };
+		858BDC8D2749C6F200FD5DCA /* ForecastChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastChart.swift; sourceTree = "<group>"; };
 		85BA7ED52748129500DF4F43 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		85DBF3CB2748E6290080312D /* Environment+safeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Environment+safeArea.swift"; sourceTree = "<group>"; };
 		85DBF3CD274901770080312D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -265,6 +269,7 @@
 				858BDC802749792E00FD5DCA /* Int+random.swift */,
 				858BDC8227497AE200FD5DCA /* MapKit++.swift */,
 				858BDC862749951100FD5DCA /* View+skeleton.swift */,
+				858BDC8B2749C60100FD5DCA /* String+capitalizing.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -297,6 +302,7 @@
 				855DAB052748353000BE2AAB /* MapView.swift */,
 				855DAB2327486B9100BE2AAB /* SectionsView.swift */,
 				855DAB3527489E0700BE2AAB /* PlainCard.swift */,
+				858BDC8D2749C6F200FD5DCA /* ForecastChart.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -488,6 +494,7 @@
 				8551FF652747D1E10053649E /* Notifications.swift in Sources */,
 				858BDC872749951100FD5DCA /* View+skeleton.swift in Sources */,
 				855DAB3627489E0700BE2AAB /* PlainCard.swift in Sources */,
+				858BDC8E2749C6F200FD5DCA /* ForecastChart.swift in Sources */,
 				858BDC632749316F00FD5DCA /* AvatarViewModifier.swift in Sources */,
 				858BDC67274933B600FD5DCA /* AvatarModel.swift in Sources */,
 				8551FF552747C9F40053649E /* Collection+safe.swift in Sources */,
@@ -504,6 +511,7 @@
 				8551FF532747C9C70053649E /* Caption.swift in Sources */,
 				858BDC70274940D700FD5DCA /* EventSheetView.swift in Sources */,
 				8551FF512747C9B20053649E /* Subtitle.swift in Sources */,
+				858BDC8C2749C60100FD5DCA /* String+capitalizing.swift in Sources */,
 				8551FF5E2747CEFE0053649E /* Encodable+dict.swift in Sources */,
 				855DAB09274837E600BE2AAB /* CityView.swift in Sources */,
 				858BDC812749792E00FD5DCA /* Int+random.swift in Sources */,

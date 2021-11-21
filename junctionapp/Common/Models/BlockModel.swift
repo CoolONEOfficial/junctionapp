@@ -10,17 +10,24 @@ import Foundation
 struct ChartWaterModel: Codable, Equatable {
     let WATER_COLD: ChartModel?
     let WATER_HOT: ChartModel?
+    let ENERGY: ChartModel?
+}
+
+extension ChartWaterModel {
+    static var mock: Self {
+        .init(WATER_COLD: nil, WATER_HOT: nil, ENERGY: nil)
+    }
 }
 
 struct BlockModel: Codable, Equatable, Identifiable {
     let charts: ChartWaterModel
-    let id: Int
+    let id: Int64
     let name: String
     let sensors: [SensorModel]
 }
 
 extension BlockModel {
     static var mock: Self {
-        .init(charts: .init(WATER_COLD: nil, WATER_HOT: nil), id: .random, name: "", sensors: [])
+        .init(charts: .mock, id: .random, name: "", sensors: [])
     }
 }

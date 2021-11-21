@@ -9,12 +9,12 @@ import Foundation
 
 struct SensorModel: Codable, Identifiable, Equatable {
     let charts: ChartWaterModel
-    let id: Int
+    let id: Int64
     let name: String
 }
 
 extension SensorModel {
     static var mock: Self {
-        .init(charts: .init(WATER_COLD: nil, WATER_HOT: nil), id: .random, name: "")
+        .init(charts: .init(WATER_COLD: nil, WATER_HOT: nil, ENERGY: nil), id: .random, name: "")
     }
 }

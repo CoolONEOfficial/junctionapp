@@ -26,9 +26,12 @@ class NotificationsViewModel: ObservableObject {
     @MainActor
     func task() async {
         guard let notification = try? await nw.fetchNotification(),
-              let name = notification.name else { return }
+              let title = notification.title else { return }
         let content = UNMutableNotificationContent()
-        content.title = name
+        content.title = title
+        if let msg = notification.message {
+            content.body = msg
+        }
         content.sound = .default
         //content.userInfo = notification.data TODO: notification userInfo
         

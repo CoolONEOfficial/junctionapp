@@ -21,6 +21,6 @@ struct Title: View {
     }
 
     var body: some View {
-        Text(verbatim).foregroundColor(color ?? theme.text).fontWeight(weight).fontSize(20)
+        Text(verbatim).foregroundColor(color ?? theme.text).fontWeight(weight).fontSize(18)
     }
 }

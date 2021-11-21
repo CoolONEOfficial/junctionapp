@@ -8,14 +8,14 @@
 import Foundation
 
 struct AvatarModel: Codable {
-    enum State: Int, Codable {
-        case poop
-        case angry
-        case sad
-        case plain
-        case fun1
-        case fun2
-        case fun3
+    enum State: String, Codable {
+        case poop = "STATE_1"
+        case angry = "STATE_2"
+        case sad = "STATE_3"
+        case plain = "STATE_4"
+        case fun1 = "STATE_5"
+        case fun2 = "STATE_6"
+        case fun3 = "STATE_7"
         
         var emoji: String {
             switch self {

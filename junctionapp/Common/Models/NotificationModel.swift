@@ -8,5 +8,6 @@
 import Foundation
 
 struct NotificationModel: Codable {
-    let name: String?
+    let title: String?
+    let message: String?
 }

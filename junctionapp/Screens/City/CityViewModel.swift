@@ -13,7 +13,14 @@ import SwiftDate
 
 class CityViewModel: ViewModel {
     @Published var houses: [HouseModel]?
-    @Published var buildings: BuildingsResponse?
+    @Published var buildings: BuildingsResponse? {
+        didSet {
+            if (buildings?.buildings.map(\.blocks).reduce([], +).count ?? 0) > 1 {
+                self.allBuildings = buildings
+            }
+        }
+    }
+    @Published var allBuildings: BuildingsResponse?
     @Published var query = ""
     @Published var selectedSections = Set<Int>() {
         didSet {
@@ -60,7 +67,7 @@ class CityViewModel: ViewModel {
     @Published var markerLocation: CoordModel?
     @Published var markerPosition: String = ""
     
-    @Published var eventSheet: EventModel? //= .init(name: "Name", sensorName: "Secson", value: 123, clusterName: "Cluster", count: 3, isEcoFriendly: false)
+    @Published var eventSheet: EventModel? //= .mock
     
     private let nw = NetworkService.shared
     private var subscriptions = Set<AnyCancellable>()
@@ -102,12 +109,11 @@ class CityViewModel: ViewModel {
 
         let req = NetworkService.BuildingsParams(from: startDate, to: endDate)
         do {
-            let buildings = try await nw.fetchBuildings(req, types: selectedSectionsEnum)
+            let buildings = try await nw.fetchBuildings(req, types: selectedSectionsEnum, block: selectedBlock, sensor: selectedSensor)
             withAnimation {
                 self.buildings = buildings
             }
         } catch {
-            let test = error
             debugPrint("error \(error)")
             notifications.alert = "Oops, error!"
             houses = nil

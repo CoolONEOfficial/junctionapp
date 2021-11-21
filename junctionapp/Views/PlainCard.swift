@@ -14,20 +14,21 @@ extension ChartWaterModel {
     var chartData: [PlainCard.ChartType: ChartModel] {
         [
             .waterCold: WATER_COLD,
-            .waterHot: WATER_HOT
+            .waterHot: WATER_HOT,
+            .energy: ENERGY
         ].compactMapValues { $0 }
     }
 }
 
 extension PlainCard {
     init(_ block: BlockModel, isSelected: Bool, skelet: Bool) {
-        self.init(text: block.name, state: .good, isSelected: isSelected, type: nil, chartData: block.charts.chartData, skelet: skelet)
+        self.init(text: block.name, state: .good, isSelected: isSelected, type: nil, chartWater: block.charts, skelet: skelet)
     }
 }
 
 extension PlainCard {
     init(_ sensor: SensorModel, isSelected: Bool, skelet: Bool) {
-        self.init(text: sensor.name, state: .good, isSelected: isSelected, type: nil, chartData: sensor.charts.chartData, skelet: skelet)
+        self.init(text: sensor.name, state: .good, isSelected: isSelected, type: nil, chartWater: sensor.charts, skelet: skelet)
     }
 }
 
@@ -40,13 +41,14 @@ struct PlainCard: View {
     
     let type: CardType?
     
-    let chartData: [ChartType: ChartModel]
+    let chartWater: ChartWaterModel
     
     let skelet: Bool
 
     enum ChartType: Int {
         case waterCold
         case waterHot
+        case energy
     
         var color: Color {
             switch self {
@@ -54,6 +56,8 @@ struct PlainCard: View {
                 return .accentBad
             case .waterCold:
                 return .accentGood
+            case .energy:
+                return .yellow
             }
         }
     }
@@ -92,19 +96,7 @@ struct PlainCard: View {
 
     @ViewBuilder
     var chart: some View {
-        ZStack {
-            ForEach(Array(chartData.enumerated()), id: \.offset) { type, entry in
-                let value = entry.value
-                if value.data.isNotEmpty {
-                    LightChartView(data: value.data.sorted { $0.date.compare($1.date) == .orderedAscending }.map { $0.value },
-                                   type: .curved,
-                                   visualType: .filled(color: entry.key.color, lineWidth: 3),
-                                   offset: 0.2
-                                   //currentValueLineType: .dash(color: .gray, lineWidth: 1, dash: [5])
-                    )
-                }
-            }
-        }
+        ForecastWaterChart(data: chartWater)
         .maxHeight(.infinity).padding(.top, 33).opacity(type != nil ? 0.4 : 1)
     }
     
@@ -118,6 +110,7 @@ struct PlainCard: View {
                     .semibold()
                     .foregroundColor(theme.text)
                     .fontSize(13)
+                    .multilineTextAlignment(.leading)
                 
                 Spacer()
             }

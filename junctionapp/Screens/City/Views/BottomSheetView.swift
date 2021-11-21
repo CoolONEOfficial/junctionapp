@@ -18,7 +18,7 @@ import SwiftDate
 enum SectionType: String, CaseIterable {
     case water = "Water"
     case energy = "Energy"
-    case exhaust = "Exhaust"
+    //case exhaust = "Exhaust"
 }
 
 struct BottomSheetView: View {
@@ -69,37 +69,47 @@ struct BottomSheetView: View {
         }
     }
     
+    func sectionTitle(_ date: DateInRegion) -> String {
+        
+        date.isTomorrow || date.isToday ? date.toRelative(since: nil, style: nil, locale: nil).capitalizingFirstLetter() : date.toFormat("EEEE d", locale: nil)
+    }
+    
     var mainScrollContent: some View {
         ScrollView {
-            VStack(alignment: .leading) {
-                LightChartView(data: [2, 17, 9, 23, 10],
-                               type: .curved,
-                               visualType: .filled(color: theme.textAccent, lineWidth: 3),
-                               offset: 0.2,
-                               currentValueLineType: .dash(color: .white, lineWidth: 2, dash: [2])
-                ).aspectRatio(328/71, contentMode: .fit).padding(.vertical, 30).padding(.horizontal, -20)
+            VStack(alignment: .leading, spacing: 20) {
+                let chart = viewModel.buildings?.buildings.first?.charts ?? .mock
+                ForecastWaterChart(data: chart).skelet(buildingsLoading).cornerRadius(Constants.cornerRadius)
+                .aspectRatio(328/71, contentMode: .fit).padding(.vertical, 30).padding(.horizontal, -20)
                 
-                Title("Today")
-                let event: EventModel = .init(name: "Name", sensorName: "Secson", value: 123, clusterName: "Cluster", count: 3, isEcoFriendly: false)
-                ForEach(.init(0...30)) { num in
-                    Button(action: {
-                        withAnimation {
-                            self.eventSheet = event
-                        }
-                    }, label: {
-                        EventView(event: event)
-                    })
+                let events = viewModel.buildings?.eventPage.events ?? .init()
+                ForEach(Array(events.keys.sorted().prefix(3)), id: \.self) { dateStr in
+                    let date = DateInRegion(dateStr)!
+                    let eventList = events[dateStr]!.prefix(10)
+                    Title(sectionTitle(date))
+                    ForEach(eventList, id: \.id) { event in
+                        Button(action: {
+                            withAnimation {
+                                self.eventSheet = event
+                            }
+                        }, label: {
+                            EventView(event: event)
+                        })
+                    }
                 }
             }.padding(.horizontal, 20)
         }
     }
     
     var blocks: [BlockModel] {
-        viewModel.buildings?.buildings.map(\.blocks).reduce([], +) ?? [ .mock, .mock, .mock ]
+        if let blocks = viewModel.buildings?.buildings.map(\.blocks).reduce([], +) {
+            return blocks.count > 1 ? blocks : viewModel.allBuildings?.buildings.map(\.blocks).reduce([], +) ?? blocks
+        } else {
+            return [ .mock, .mock, .mock ]
+        }
     }
     
     var sensors: [SensorModel] {
-        let sensors = blocks.map(\.sensors).reduce([], +)
+        let sensors = viewModel.selectedBlock?.sensors ?? blocks.map(\.sensors).reduce([], +)
         return sensors.isNotEmpty ? sensors : [ .mock, .mock, .mock ]
     }
 
@@ -157,12 +167,12 @@ struct BottomSheetView: View {
                     }, label: {
                         Title(DateInRegion(viewModel.endDate).monthName(.default), color: theme.textAccent)
                     })
-                    Title("expenses").padding(.horizontal, 6)
+                    Title("expenses").padding(.leading, 6)
                     
                     Spacer()
                     
                     Button(action: nextUnit, label: {
-                        Title("-\(String(format: "%.2f", total?.values ?? 0)) \(total?.unit.name ?? "")", weight: .regular).lineLimit(1).skelet(buildingsLoading).cornerRadius(Constants.cornerRadius).id(total?.unit.name ?? "").height(30)
+                        Title("-\(String(format: "%.2f", total?.values ?? 0)) \(total?.unit.name ?? "")", weight: .regular).lineLimit(1).skelet(buildingsLoading).cornerRadius(Constants.cornerRadius).id(total?.unit.name ?? "").height(30).adjustsFontSizeToFitWidth(true)
                     }).disabled((viewModel.buildings?.totals.count ?? 0) <= 1)
                 }.padding(.bottom, 8).padding(.top, -8)
                 

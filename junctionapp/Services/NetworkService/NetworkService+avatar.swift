@@ -10,6 +10,6 @@ import Alamofire
 
 extension NetworkService {
     func fetchAvatar() async throws -> AvatarModel {
-        try await AF.request(apiBase + "/avatar").responseDecodable(of: AvatarModel.self)
+        try await AF.request(apiBase + "/assistant").responseDecodable(of: AvatarModel.self)
     }
 }

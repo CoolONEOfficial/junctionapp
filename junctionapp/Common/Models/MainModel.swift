@@ -9,5 +9,5 @@ import Foundation
 
 struct MainModel: Codable {
     var name: String?
-    var id: Int
+    var id: Int64
 }
