@@ -15,7 +15,7 @@ class NotificationsViewModel: ObservableObject {
 
     func onAppear() {
         timer?.invalidate()
-        timer = .scheduledTimer(withTimeInterval: 3, repeats: true) { [weak self] _ in self?.checkNotifications() }
+        timer = .scheduledTimer(withTimeInterval: Constants.fetchInterval, repeats: true) { [weak self] _ in self?.checkNotifications() }
     }
 
     func onDisappear() {

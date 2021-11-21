@@ -37,7 +37,7 @@ class AvatarViewModel: ViewModel {
     override func onAppear() {
         super.onAppear()
         timer?.invalidate()
-        timer = .scheduledTimer(withTimeInterval: 3, repeats: true) { [weak self] _ in self?.checkAvatar() }
+        timer = .scheduledTimer(withTimeInterval: Constants.fetchInterval, repeats: true) { [weak self] _ in self?.checkAvatar() }
     }
 
     func onDisappear() {
