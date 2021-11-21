@@ -17,6 +17,18 @@ struct EventModel: Codable, Hashable {
     let isEcoFriendly: Bool?
     let dateTime: Date
     let message: String?
+    let type: EventType = .faucet
+}
+
+enum EventType: String, Codable {
+    case faucet
+    case loundry
+    case shower
+    case washer
+    
+    var image: String {
+        "Type\(rawValue.capitalizingFirstLetter())"
+    }
 }
 
 extension EventModel: Identifiable {

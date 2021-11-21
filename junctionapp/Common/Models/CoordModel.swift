@@ -9,16 +9,16 @@ import Foundation
 import MapKit
 
 struct CoordModel: Codable, Equatable {
-    let latitude: Double
-    let longitude: Double
+    let lat: Double
+    let lon: Double
 }
 
 extension CoordModel {
     init(_ coord: CLLocationCoordinate2D) {
-        self.init(latitude: coord.latitude, longitude: coord.longitude)
+        self.init(lat: coord.latitude, lon: coord.longitude)
     }
 
     var coord: CLLocationCoordinate2D {
-        .init(latitude: latitude, longitude: longitude)
+        .init(latitude: lat, longitude: lon)
     }
 }

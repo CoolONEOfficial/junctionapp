@@ -37,18 +37,22 @@ struct ForecastChart: View {
         color.opacity(0.6)
     }
     
+    var forecastColor: Color {
+        color.opacity(0.15)
+    }
+    
     var gradient: LinearGradient {
-        .linearGradient(stops: [ Gradient.Stop(color: gradientColor, location: 0), Gradient.Stop(color: gradientColor, location: forecast), .init(color: .clear, location: 1) ], startPoint: .leading, endPoint: .trailing)
+        .linearGradient(stops: [ Gradient.Stop(color: gradientColor, location: 0), Gradient.Stop(color: gradientColor, location: forecast), Gradient.Stop(color: forecastColor, location: min(forecast + 0.1, 1)), .init(color: forecastColor, location: 1) ], startPoint: .leading, endPoint: .trailing)
     }
     
     var body: some View {
         LightChartView(data: data.data.map(\.value),
                        type: .curved,
-                       visualType: .customFilled(color: color, lineWidth: 3, fillGradient: gradient),
+                       visualType: .filled(color: color, lineWidth: 3),
                        offset: 0.2,
                        currentValueLineType: .dash(color: .white, lineWidth: 2, dash: [2])
         ).mask(
-            LinearGradient(gradient: Gradient(colors: [Color.black, Color.black.opacity(0)]), startPoint: .top, endPoint: .bottom)
+            gradient
         )
     }
 }

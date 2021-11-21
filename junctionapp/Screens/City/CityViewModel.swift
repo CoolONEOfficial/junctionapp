@@ -15,6 +15,11 @@ class CityViewModel: ViewModel {
     @Published var houses: [HouseModel]?
     @Published var buildings: BuildingsResponse? {
         didSet {
+            if let point = buildings?.buildings.first(where: { $0.point != nil })?.point {
+                withAnimation {
+                    self.markerLocation = point
+                }
+            }
             if (buildings?.buildings.map(\.blocks).reduce([], +).count ?? 0) > 1 {
                 self.allBuildings = buildings
             }
@@ -107,7 +112,7 @@ class CityViewModel: ViewModel {
 //            }
 //        }
 
-        let req = NetworkService.BuildingsParams(from: startDate, to: endDate)
+        let req = NetworkService.BuildingsParams(from: (DateInRegion(startDate) + 1.months).date, to: (DateInRegion(endDate) + 1.months).date)
         do {
             let buildings = try await nw.fetchBuildings(req, types: selectedSectionsEnum, block: selectedBlock, sensor: selectedSensor)
             withAnimation {

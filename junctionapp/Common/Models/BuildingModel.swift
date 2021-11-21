@@ -10,13 +10,13 @@ import Foundation
 struct BuildingModel: Codable, Identifiable, Equatable {
     let id: Int64
     let name: String
-    //let point:
+    let point: CoordModel?
     let blocks: [BlockModel]
     let charts: ChartWaterModel
 }
 
 extension BuildingModel {
     static var mock: Self {
-        .init(id: .random, name: "", blocks: [], charts: .mock)
+        .init(id: .random, name: "", point: nil, blocks: [], charts: .mock)
     }
 }

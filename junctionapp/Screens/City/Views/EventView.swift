@@ -13,7 +13,9 @@ struct EventView: View {
     var body: some View {
         HStack(spacing: 12) {
             let isEcoFriendly = event.isEcoFriendly ?? true
-            Ellipse().fill(isEcoFriendly ? Color.eco : Color.notEco).width(55).height(55).overlay(alignment: .bottomTrailing) {
+            Ellipse().fill(isEcoFriendly ? Color.eco : Color.notEco).width(55).height(55).overlay {
+                Image(event.type.image).resizable().scaledToFit().width(35).height(35)
+            }.overlay(alignment: .bottomTrailing) {
                 if let count = event.count, count > 1 {
                     Ellipse().fill(isEcoFriendly ? Color.eco : Color.notEco).width(22).height(22)
                         .strokeCircle(Color.white, lineWidth: 1).overlay {
